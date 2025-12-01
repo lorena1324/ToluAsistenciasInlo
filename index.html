@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Asistencias</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Registro de Asistencias</h1>
+
+      <form id="registroForm">
+        <label class="label">Cédula</label>
+        <input
+          type="text"
+          id="ID"
+          class="input"
+          required
+          placeholder="Ingrese la cédula"
+        />
+
+        <label class="label">Email del Usuario</label>
+        <input type="email" id="UsuarioEmail" class="input" required readonly />
+
+        <label class="label">Nombre del Usuario</label>
+        <input type="text" id="UsuarioNombre" class="input" required readonly />
+
+        <label class="label">Tipo</label>
+        <div class="toggle-container">
+          <button type="button" class="toggle-btn active" data-value="ENTRADA">
+            ENTRADA
+          </button>
+          <button type="button" class="toggle-btn" data-value="SALIDA">
+            SALIDA
+          </button>
+        </div>
+        <input type="hidden" id="Tipo" value="ENTRADA" />
+
+        <label class="label">Operación *</label>
+        <select id="Operacion" class="input">
+          <option value="">Seleccione...</option>
+          <option>Multidimensionales</option>
+          <option>Red polar</option>
+          <option>Frigorifico</option>
+          <option>Alkosto</option>
+          <option>Pepsico funza</option>
+          <option>Pepsico maquila</option>
+          <option>Pepsico 3pd</option>
+          <option>Pepsico materia prima</option>
+        </select>
+
+        <label class="label">Foto</label>
+        <div class="photo-box">
+          <span class="camera-icon">📷</span>
+          <input type="file" id="foto" accept="image/*" capture="environment" />
+        </div>
+        <div id="fotoPreview" style="margin-top: 10px; display: none">
+          <img
+            id="fotoImg"
+            src=""
+            alt="Vista previa"
+            style="max-width: 100%; max-height: 150px; border-radius: 8px"
+          />
+        </div>
+        <input type="hidden" id="FotoURL" />
+
+        <label class="label">Comentario</label>
+        <textarea
+          id="Comentario"
+          class="input"
+          rows="3"
+          placeholder="Comentarios adicionales..."
+        ></textarea>
+
+        <button type="submit" class="save-btn">Guardar Registro</button>
+      </form>
+
+      <div
+        id="mensaje"
+        style="
+          margin-top: 15px;
+          padding: 10px;
+          border-radius: 8px;
+          display: none;
+        "
+      ></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

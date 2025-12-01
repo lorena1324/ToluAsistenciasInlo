@@ -1,0 +1,18 @@
+[
+  {
+    "cedula": "1234567890",
+    "nombre": "Juan Pérez",
+    "email": "juan.perez@example.com"
+  },
+  {
+    "cedula": "0987654321",
+    "nombre": "María González",
+    "email": "maria.gonzalez@example.com"
+  },
+  {
+    "cedula": "1122334455",
+    "nombre": "Carlos Rodríguez",
+    "email": "carlos.rodriguez@example.com"
+  }
+]
+
